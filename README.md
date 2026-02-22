@@ -210,11 +210,3 @@ Agora vamos praticar com:
 - **DeepEval Agentic metrics** — Métricas específicas para agentes.
 
 ---
-
-## 📝 Licença
-
-Este material é parte do curso de LLM and AI Agents Evaluation da FIAP.
-
----
-
-**Última atualização**: 2024
