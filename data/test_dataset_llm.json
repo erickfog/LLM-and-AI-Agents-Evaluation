@@ -1,0 +1,68 @@
+[
+  {
+    "id": "llm_001",
+    "input": "Qual é a capital do Brasil?",
+    "actual_output": "A capital do Brasil é Brasília, localizada no Distrito Federal.",
+    "expected_output": "Brasília",
+    "context": "Brasília é a capital federal do Brasil, fundada em 1960. Está localizada no Distrito Federal, na região Centro-Oeste do país.",
+    "category": "geography"
+  },
+  {
+    "id": "llm_002",
+    "input": "Explique o que é machine learning em uma frase.",
+    "actual_output": "Machine learning é uma área da inteligência artificial que permite que sistemas aprendam e melhorem automaticamente através da experiência, sem serem explicitamente programados para cada tarefa.",
+    "expected_output": null,
+    "context": "Machine learning é um subcampo da inteligência artificial que se concentra no desenvolvimento de algoritmos que podem aprender e fazer previsões ou decisões baseadas em dados.",
+    "category": "technical",
+    "criteria": "A resposta deve ser concisa, técnica e precisa"
+  },
+  {
+    "id": "llm_003",
+    "input": "Resuma o artigo sobre mudanças climáticas.",
+    "actual_output": "O artigo discute as principais causas das mudanças climáticas, incluindo emissões de gases de efeito estufa, desmatamento e atividades industriais. Também menciona os impactos esperados, como aumento do nível do mar e eventos climáticos extremos.",
+    "expected_output": null,
+    "context": "As mudanças climáticas são causadas principalmente por atividades humanas que aumentam a concentração de gases de efeito estufa na atmosfera. Os principais contribuintes incluem queima de combustíveis fósseis, desmatamento e processos industriais. Os impactos incluem aumento da temperatura global, derretimento de geleiras, elevação do nível do mar e aumento na frequência de eventos climáticos extremos como furacões e secas.",
+    "category": "summarization"
+  },
+  {
+    "id": "llm_004",
+    "input": "Qual é a fórmula química da água?",
+    "actual_output": "A fórmula química da água é H2O, que significa que cada molécula de água contém dois átomos de hidrogênio e um átomo de oxigênio.",
+    "expected_output": "H2O",
+    "context": "A água é um composto químico com fórmula molecular H2O, consistindo de dois átomos de hidrogênio covalentemente ligados a um átomo de oxigênio.",
+    "category": "science"
+  },
+  {
+    "id": "llm_005",
+    "input": "Como posso melhorar minha produtividade no trabalho?",
+    "actual_output": "Para melhorar sua produtividade, você pode usar técnicas como a Pomodoro, organizar suas tarefas por prioridade, eliminar distrações e fazer pausas regulares.",
+    "expected_output": null,
+    "context": null,
+    "category": "advice"
+  },
+  {
+    "id": "llm_006",
+    "input": "O que é Python?",
+    "actual_output": "Python é uma linguagem de programação de alto nível, interpretada e de propósito geral. Foi criada por Guido van Rossum e é conhecida por sua sintaxe clara e legível.",
+    "expected_output": null,
+    "context": "Python é uma linguagem de programação de alto nível criada por Guido van Rossum e lançada pela primeira vez em 1991. É uma linguagem interpretada, o que significa que o código é executado linha por linha por um interpretador. Python é conhecido por sua sintaxe simples e legível, que enfatiza a legibilidade do código.",
+    "category": "technical"
+  },
+  {
+    "id": "llm_007",
+    "input": "Quantos planetas existem no sistema solar?",
+    "actual_output": "Existem 8 planetas no sistema solar: Mercúrio, Vênus, Terra, Marte, Júpiter, Saturno, Urano e Netuno.",
+    "expected_output": "8 planetas",
+    "context": "O sistema solar consiste do Sol e oito planetas que orbitam ao seu redor: Mercúrio, Vênus, Terra, Marte, Júpiter, Saturno, Urano e Netuno. Plutão foi reclassificado como planeta anão em 2006.",
+    "category": "science"
+  },
+  {
+    "id": "llm_008",
+    "input": "Explique o conceito de API REST.",
+    "actual_output": "REST (Representational State Transfer) é um estilo arquitetural para desenvolvimento de serviços web. APIs REST usam métodos HTTP padrão como GET, POST, PUT e DELETE para operações CRUD.",
+    "expected_output": null,
+    "context": "REST é um estilo arquitetural para desenvolvimento de serviços web que utiliza métodos HTTP padrão. Uma API RESTful segue princípios como stateless, uso de recursos identificados por URIs, e métodos HTTP para operações (GET para ler, POST para criar, PUT para atualizar, DELETE para remover).",
+    "category": "technical",
+    "criteria": "A resposta deve ser técnica, precisa e mencionar métodos HTTP"
+  }
+]

@@ -1,0 +1,216 @@
+[
+  {
+    "id": "agent_001",
+    "task": "Pesquisar informações sobre a temperatura atual em São Paulo e calcular quantos graus a mais está em relação a 20°C",
+    "expected_tools": ["web_search", "calculator"],
+    "expected_plan": [
+      "Pesquisar temperatura atual em São Paulo",
+      "Subtrair 20 da temperatura encontrada",
+      "Retornar o resultado"
+    ],
+    "expected_output": "A temperatura em São Paulo está X graus acima de 20°C",
+    "execution": {
+      "plan": [
+        "Pesquisar temperatura atual em São Paulo usando web_search",
+        "Calcular a diferença em relação a 20°C usando calculator",
+        "Apresentar o resultado final"
+      ],
+      "actions": [
+        {
+          "tool_name": "web_search",
+          "arguments": {
+            "query": "temperatura atual São Paulo"
+          },
+          "result": "A temperatura atual em São Paulo é 28°C",
+          "step_number": 1
+        },
+        {
+          "tool_name": "calculator",
+          "arguments": {
+            "expression": "28 - 20"
+          },
+          "result": "8",
+          "step_number": 2
+        }
+      ],
+      "final_output": "A temperatura em São Paulo está 8 graus acima de 20°C"
+    }
+  },
+  {
+    "id": "agent_002",
+    "task": "Converter 100 dólares para reais usando a taxa de câmbio atual",
+    "expected_tools": ["web_search", "calculator"],
+    "expected_plan": [
+      "Buscar taxa de câmbio USD para BRL",
+      "Multiplicar 100 pela taxa encontrada",
+      "Retornar o valor convertido"
+    ],
+    "expected_output": "100 dólares equivalem a aproximadamente X reais",
+    "execution": {
+      "plan": [
+        "Pesquisar taxa de câmbio atual USD/BRL",
+        "Calcular conversão de 100 USD para BRL",
+        "Formatar e retornar resultado"
+      ],
+      "actions": [
+        {
+          "tool_name": "web_search",
+          "arguments": {
+            "query": "taxa de câmbio dólar real hoje"
+          },
+          "result": "A taxa de câmbio atual é 1 USD = 5.20 BRL",
+          "step_number": 1
+        },
+        {
+          "tool_name": "calculator",
+          "arguments": {
+            "expression": "100 * 5.20"
+          },
+          "result": "520",
+          "step_number": 2
+        }
+      ],
+      "final_output": "100 dólares equivalem a aproximadamente 520 reais"
+    }
+  },
+  {
+    "id": "agent_003",
+    "task": "Encontrar a população do Brasil e calcular a porcentagem que representa em relação a 8 bilhões de pessoas",
+    "expected_tools": ["web_search", "calculator"],
+    "expected_plan": [
+      "Pesquisar população do Brasil",
+      "Calcular porcentagem em relação a 8 bilhões",
+      "Retornar resultado formatado"
+    ],
+    "expected_output": "A população do Brasil representa X% da população mundial de 8 bilhões",
+    "execution": {
+      "plan": [
+        "Buscar dados sobre população do Brasil",
+        "Calcular porcentagem",
+        "Apresentar resultado"
+      ],
+      "actions": [
+        {
+          "tool_name": "web_search",
+          "arguments": {
+            "query": "população do Brasil 2024"
+          },
+          "result": "A população do Brasil é aproximadamente 215 milhões de habitantes",
+          "step_number": 1
+        },
+        {
+          "tool_name": "calculator",
+          "arguments": {
+            "expression": "(215000000 / 8000000000) * 100"
+          },
+          "result": "2.6875",
+          "step_number": 2
+        }
+      ],
+      "final_output": "A população do Brasil representa aproximadamente 2.69% da população mundial de 8 bilhões"
+    }
+  },
+  {
+    "id": "agent_004",
+    "task": "Pesquisar sobre Python e criar um resumo de 3 pontos principais",
+    "expected_tools": ["web_search", "text_processor"],
+    "expected_plan": [
+      "Pesquisar informações sobre Python",
+      "Extrair 3 pontos principais",
+      "Gerar resumo formatado"
+    ],
+    "expected_output": "Resumo com 3 pontos principais sobre Python",
+    "execution": {
+      "plan": [
+        "Pesquisar sobre Python",
+        "Processar informações",
+        "Criar resumo"
+      ],
+      "actions": [
+        {
+          "tool_name": "web_search",
+          "arguments": {
+            "query": "Python programming language features"
+          },
+          "result": "Python é uma linguagem de programação de alto nível, interpretada, com sintaxe simples e legível, amplamente usada em ciência de dados, web development e automação.",
+          "step_number": 1
+        },
+        {
+          "tool_name": "text_processor",
+          "arguments": {
+            "action": "summarize",
+            "text": "Python é uma linguagem de programação de alto nível, interpretada, com sintaxe simples e legível, amplamente usada em ciência de dados, web development e automação.",
+            "max_points": 3
+          },
+          "result": "1. Python é uma linguagem interpretada de alto nível\n2. Possui sintaxe simples e legível\n3. É amplamente usada em ciência de dados, web development e automação",
+          "step_number": 2
+        }
+      ],
+      "final_output": "Resumo sobre Python:\n1. Python é uma linguagem interpretada de alto nível\n2. Possui sintaxe simples e legível\n3. É amplamente usada em ciência de dados, web development e automação"
+    }
+  },
+  {
+    "id": "agent_005",
+    "task": "Verificar se um email é válido e contar quantos caracteres ele tem",
+    "expected_tools": ["email_validator", "text_processor"],
+    "expected_plan": [
+      "Validar formato do email",
+      "Contar caracteres do email",
+      "Retornar ambos os resultados"
+    ],
+    "expected_output": "Email válido/inválido e número de caracteres",
+    "execution": {
+      "plan": [
+        "Validar email",
+        "Contar caracteres"
+      ],
+      "actions": [
+        {
+          "tool_name": "email_validator",
+          "arguments": {
+            "email": "usuario@exemplo.com"
+          },
+          "result": "Email válido",
+          "step_number": 1
+        },
+        {
+          "tool_name": "text_processor",
+          "arguments": {
+            "action": "count_chars",
+            "text": "usuario@exemplo.com"
+          },
+          "result": "17",
+          "step_number": 2
+        }
+      ],
+      "final_output": "O email usuario@exemplo.com é válido e possui 17 caracteres"
+    }
+  },
+  {
+    "id": "agent_006",
+    "task": "Calcular a média de três números: 10, 20 e 30",
+    "expected_tools": ["calculator"],
+    "expected_plan": [
+      "Somar os três números",
+      "Dividir por 3",
+      "Retornar resultado"
+    ],
+    "expected_output": "A média é 20",
+    "execution": {
+      "plan": [
+        "Calcular média"
+      ],
+      "actions": [
+        {
+          "tool_name": "calculator",
+          "arguments": {
+            "expression": "(10 + 20 + 30) / 3"
+          },
+          "result": "20",
+          "step_number": 1
+        }
+      ],
+      "final_output": "A média dos números 10, 20 e 30 é 20"
+    }
+  }
+]

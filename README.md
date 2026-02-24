@@ -197,9 +197,29 @@ Além de métricas de saída, considere métricas de negócio ou experiência:
 
 Agora vamos praticar com:
 - 📍 DeepEval (ou framework equivalente)
+- 📍 Gemini como LLM e como LLM-as-a-Judge
 - 📍 Métricas LLM-as-a-Judge
 - 📍 Métricas de RAG
 - 📍 Métricas de agentes
+
+#### Configuração para usar Gemini na demo
+
+- Crie um arquivo `.env` na raiz do projeto (baseado em `.env.example`, se existir).
+- Defina pelo menos:
+  - `GEMINI_API_KEY` (ou `GOOGLE_API_KEY`)
+  - `GEMINI_MODEL` (ex.: `gemini-1.5-flash` ou `gemini-1.5-pro`)
+- Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+- Execute os exemplos:
+
+```bash
+python3 examples/example_llm_evaluation.py
+python3 examples/example_agent_evaluation.py
+```
 
 ---
 
