@@ -29,8 +29,6 @@ wheels/
 *.ipynb_checkpoints
 
 # Reports
-reports/
-*.png
 *.pdf
 # Permitir requirements.txt mas ignorar outros .txt (como relatórios)
 *.txt
