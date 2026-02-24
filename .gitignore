@@ -30,9 +30,11 @@ wheels/
 
 # Reports
 reports/
-*.txt
 *.png
 *.pdf
+# Permitir requirements.txt mas ignorar outros .txt (como relatórios)
+*.txt
+!requirements.txt
 
 # IDE
 .vscode/
